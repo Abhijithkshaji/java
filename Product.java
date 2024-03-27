@@ -1,33 +1,27 @@
-class Product {
-    int pcode;
-    String pname;
-    double price;
-
-    Product(int pcode, String pname, double price) {
-        this.pcode = pcode;
-        this.pname = pname;
-        this.price = price;
-    }
-}
-
-class ProductMain {
-    public static void main(String[] args) {
-
-        Product product1 = new Product(1, "Product 1", 10.50);
-        Product product2 = new Product(2, "Product 2", 15.75);
-        Product product3 = new Product(3, "Product 3", 8.25);
-
-        Product cheapestProduct;
-        if (product1.price<product2.price && product1.price<product3.price){
-            cheapestProduct = product1;
-        }
-        else if (product2.price<product1.price && product2.price<product3.price){
-            cheapestProduct = product2;
-        }
-        else{
-        	cheapestProduct = product3;
-
-        System.out.println("The cheapest product is: " + cheapestProduct.pname + " with price $" + cheapestProduct.price);
-    	}
+class Product
+{
+	int pcode;
+	String pname;
+	double price;
+	public static void main(String args[])
+	{
+		Product p1=new Product();
+		Product p2=new Product();
+		Product p3=new Product();
+		p1.price=2000;
+		p2.price=3000;
+		p3.price=8000;
+		if(p1.price<p2.price && p1.price<p3.price)
+		{
+		System.out.println("Price 1 is lowest "+p1.price);
+		}
+		else if(p2.price>p1.price && p2.price>p3.price)
+		{
+		System.out.println("Price 2 is lowest "+p2.price);
+		}
+		else
+		{
+		System.out.println("price 3 is lowest "+p3.price);
+		}
 	}
 }
